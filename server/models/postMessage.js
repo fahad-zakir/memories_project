@@ -10,7 +10,7 @@ const postSchema = mongoose.Schema({
         type: Number,
         default: 0
     },
-    created: {
+    createdAt: {
         type: Date,
         default: new Date()
     },
@@ -18,4 +18,4 @@ const postSchema = mongoose.Schema({
 
 const PostMessage = mongoose.model('PostMessage', postSchema);
 
-export default postMessage;
+export default PostMessage;

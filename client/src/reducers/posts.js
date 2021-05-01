@@ -3,7 +3,9 @@ export default (posts = [], action) => {
     // our state is going to be posts, so renaming state to posts above
     switch (action.type) {
         case 'FETCH_ALL':
-            return posts;
+            return action.payload;
+            // this is coming from the action dispatch.
+            // represents our posts
         case 'CREATE':
             return posts;
         default:

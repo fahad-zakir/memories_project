@@ -1,6 +1,7 @@
 import express from 'express';
 
 import { getPosts, createPost } from '../controllers/posts.js'
+// in node you have to place the .js unlike in react
 
 const router = express.Router();
 

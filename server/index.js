@@ -18,7 +18,7 @@ app.use(cors());
 
 const CONNECTION_URL = 'mongodb+srv://abumusa1981:fahad0542@cluster0.zgqfo.mongodb.net/myFirstDatabase?retryWrites=true&w=majority'
 //setting up mongodb atlas to setup db now setup on their site and get credential
-const PORT = process.env.PORT || 4000;
+const PORT = process.env.PORT || 5000;
 
 mongoose.connect(CONNECTION_URL, { useNewUrlParser: true, useUnifiedTopology: true })
   .then(() => app.listen(PORT, () => console.log(`Server Running on Port: http://localhost:${PORT}`)))

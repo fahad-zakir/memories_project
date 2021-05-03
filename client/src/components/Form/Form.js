@@ -26,6 +26,7 @@ const Form = ({ currentId, setCurrentId }) => {
 // dispatched is being done through this handleSubmit
 // createPost is the method coming from action
 // postData is the state, the post we are creating
+// once this is dispatched go to reduers post
   const handleSubmit = async (e) => {
     e.preventDefault();
 

@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { TextField, Button, Typography, Paper } from '@material-ui/core';
 // Forms from materialize
+// userDispatch dispatches the action from the actions
 import { useDispatch, useSelector } from 'react-redux';
 import FileBase from 'react-file-base64';
 
@@ -22,7 +23,9 @@ const Form = ({ currentId, setCurrentId }) => {
     setCurrentId(0);
     setPostData({ creator: '', title: '', message: '', tags: '', selectedFile: '' });
   };
-
+// dispatched is being done through this handleSubmit
+// createPost is the method coming from action
+// postData is the state, the post we are creating
   const handleSubmit = async (e) => {
     e.preventDefault();
 
@@ -45,7 +48,7 @@ const Form = ({ currentId, setCurrentId }) => {
           label="Creator" 
           fullWidth 
           // value is stored in the state postData.creator
-          // each object key is going to be a specific text field
+          // each postData object key is going to be a specific text field
           value={postData.creator} 
           // onChange has the setPostData for setting the state for those properties
           // with (e) below this is a callBack function with event as a paramter
@@ -90,3 +93,4 @@ const Form = ({ currentId, setCurrentId }) => {
 };
 
 export default Form;
+// most of these properties that you are seeing in buttons and text are Materialize properties for buttons, fields, etc.

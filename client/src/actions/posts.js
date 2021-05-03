@@ -24,6 +24,7 @@ export const getPosts = () => async (dispatch) => {
   }
 };
 
+// a post api request to our backEnd server
 export const createPost = (post) => async (dispatch) => {
   try {
     const { data } = await api.createPost(post);
